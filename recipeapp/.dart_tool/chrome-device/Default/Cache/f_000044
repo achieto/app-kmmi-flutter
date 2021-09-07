@@ -1,22 +1,16 @@
-define(['dart_sdk', 'packages/flutter/src/services/system_channels.dart'], (function load__packages__flutter__src__services__system_chrome_dart(dart_sdk, packages__flutter__src__services__system_channels$46dart) {
+define(['dart_sdk', 'packages/flutter/src/services/mouse_cursor.dart', 'packages/flutter/src/painting/borders.dart'], (function load__packages__flutter__src__material__material_state_dart(dart_sdk, packages__flutter__src__services__mouse_cursor$46dart, packages__flutter__src__painting__borders$46dart) {
   'use strict';
   const core = dart_sdk.core;
-  const _js_helper = dart_sdk._js_helper;
   const ui = dart_sdk.ui;
-  const async = dart_sdk.async;
-  const _interceptors = dart_sdk._interceptors;
+  const collection = dart_sdk.collection;
   const dart = dart_sdk.dart;
   const dartx = dart_sdk.dartx;
-  const system_channels = packages__flutter__src__services__system_channels$46dart.src__services__system_channels;
-  var system_chrome = Object.create(dart.library);
-  var $toString = dartx.toString;
-  var $runtimeType = dartx.runtimeType;
-  var $add = dartx.add;
+  const mouse_cursor = packages__flutter__src__services__mouse_cursor$46dart.src__services__mouse_cursor;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  var material_state = Object.create(dart.library);
   dart._checkModuleNullSafetyMode(true);
   var T = {
-    IdentityMapOfString$dynamic: () => (T.IdentityMapOfString$dynamic = dart.constFn(_js_helper.IdentityMap$(core.String, dart.dynamic)))(),
-    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
-    JSArrayOfString: () => (T.JSArrayOfString = dart.constFn(_interceptors.JSArray$(core.String)))()
+    LinkedHashSetOfMaterialState: () => (T.LinkedHashSetOfMaterialState = dart.constFn(collection.LinkedHashSet$(material_state.MaterialState)))()
   };
   const CT = Object.create({
     _: () => (C, CT)
@@ -24,368 +18,404 @@ define(['dart_sdk', 'packages/flutter/src/services/system_channels.dart'], (func
   dart.defineLazy(CT, {
     get C0() {
       return C[0] = dart.const({
-        __proto__: system_chrome.DeviceOrientation.prototype,
-        [_name$]: "DeviceOrientation.portraitUp",
+        __proto__: material_state.MaterialState.prototype,
+        [_name$]: "MaterialState.hovered",
         index: 0
       });
     },
     get C1() {
       return C[1] = dart.const({
-        __proto__: system_chrome.DeviceOrientation.prototype,
-        [_name$]: "DeviceOrientation.landscapeLeft",
+        __proto__: material_state.MaterialState.prototype,
+        [_name$]: "MaterialState.focused",
         index: 1
       });
     },
     get C2() {
       return C[2] = dart.const({
-        __proto__: system_chrome.DeviceOrientation.prototype,
-        [_name$]: "DeviceOrientation.portraitDown",
+        __proto__: material_state.MaterialState.prototype,
+        [_name$]: "MaterialState.pressed",
         index: 2
       });
     },
     get C3() {
       return C[3] = dart.const({
-        __proto__: system_chrome.DeviceOrientation.prototype,
-        [_name$]: "DeviceOrientation.landscapeRight",
+        __proto__: material_state.MaterialState.prototype,
+        [_name$]: "MaterialState.dragged",
         index: 3
       });
     },
     get C4() {
-      return C[4] = dart.constList([C[0] || CT.C0, C[1] || CT.C1, C[2] || CT.C2, C[3] || CT.C3], system_chrome.DeviceOrientation);
+      return C[4] = dart.const({
+        __proto__: material_state.MaterialState.prototype,
+        [_name$]: "MaterialState.selected",
+        index: 4
+      });
     },
     get C5() {
       return C[5] = dart.const({
-        __proto__: system_chrome.SystemUiOverlay.prototype,
-        [_name$]: "SystemUiOverlay.top",
-        index: 0
+        __proto__: material_state.MaterialState.prototype,
+        [_name$]: "MaterialState.disabled",
+        index: 5
       });
     },
     get C6() {
       return C[6] = dart.const({
-        __proto__: system_chrome.SystemUiOverlay.prototype,
-        [_name$]: "SystemUiOverlay.bottom",
-        index: 1
+        __proto__: material_state.MaterialState.prototype,
+        [_name$]: "MaterialState.error",
+        index: 6
       });
     },
     get C7() {
-      return C[7] = dart.constList([C[5] || CT.C5, C[6] || CT.C6], system_chrome.SystemUiOverlay);
+      return C[7] = dart.constList([C[0] || CT.C0, C[1] || CT.C1, C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6], material_state.MaterialState);
     },
-    get C9() {
-      return C[9] = dart.const({
-        __proto__: ui.Brightness.prototype,
-        [_name]: "Brightness.light",
-        index: 1
-      });
+    get C8() {
+      return C[8] = dart.constSet(material_state.MaterialState, []);
     },
     get C10() {
       return C[10] = dart.const({
-        __proto__: ui.Brightness.prototype,
-        [_name]: "Brightness.dark",
-        index: 0
+        __proto__: mouse_cursor.SystemMouseCursor.prototype,
+        [SystemMouseCursor_kind]: "basic"
       });
     },
     get C11() {
       return C[11] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278190080.0
+        __proto__: mouse_cursor.SystemMouseCursor.prototype,
+        [SystemMouseCursor_kind]: "click"
       });
     },
-    get C8() {
-      return C[8] = dart.const({
-        __proto__: system_chrome.SystemUiOverlayStyle.prototype,
-        [statusBarIconBrightness$]: C[9] || CT.C9,
-        [statusBarBrightness$]: C[10] || CT.C10,
-        [statusBarColor$]: null,
-        [systemNavigationBarIconBrightness$]: C[9] || CT.C9,
-        [systemNavigationBarDividerColor$]: null,
-        [systemNavigationBarColor$]: C[11] || CT.C11
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: material_state._EnabledAndDisabledMouseCursor.prototype,
+        [_EnabledAndDisabledMouseCursor_name]: "clickable",
+        [_EnabledAndDisabledMouseCursor_disabledCursor]: C[10] || CT.C10,
+        [_EnabledAndDisabledMouseCursor_enabledCursor]: C[11] || CT.C11
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: mouse_cursor.SystemMouseCursor.prototype,
+        [SystemMouseCursor_kind]: "text"
       });
     },
     get C12() {
       return C[12] = dart.const({
-        __proto__: system_chrome.SystemUiOverlayStyle.prototype,
-        [statusBarIconBrightness$]: C[10] || CT.C10,
-        [statusBarBrightness$]: C[9] || CT.C9,
-        [statusBarColor$]: null,
-        [systemNavigationBarIconBrightness$]: C[9] || CT.C9,
-        [systemNavigationBarDividerColor$]: null,
-        [systemNavigationBarColor$]: C[11] || CT.C11
+        __proto__: material_state._EnabledAndDisabledMouseCursor.prototype,
+        [_EnabledAndDisabledMouseCursor_name]: "textable",
+        [_EnabledAndDisabledMouseCursor_disabledCursor]: C[10] || CT.C10,
+        [_EnabledAndDisabledMouseCursor_enabledCursor]: C[13] || CT.C13
       });
     }
   }, false);
-  var C = Array(13).fill(void 0);
-  var I = [
-    "package:flutter/src/services/system_chrome.dart",
-    "file:///C:/Users/user/Documents/flutter/packages/flutter/lib/src/services/system_chrome.dart"
-  ];
-  var _name$ = dart.privateName(system_chrome, "_name");
-  system_chrome.DeviceOrientation = class DeviceOrientation extends core.Object {
+  var C = Array(14).fill(void 0);
+  var I = ["package:flutter/src/material/material_state.dart"];
+  var _name$ = dart.privateName(material_state, "_name");
+  material_state.MaterialState = class MaterialState extends core.Object {
     toString() {
       return this[_name$];
     }
   };
-  (system_chrome.DeviceOrientation.new = function(index, _name) {
+  (material_state.MaterialState.new = function(index, _name) {
     this.index = index;
     this[_name$] = _name;
     ;
-  }).prototype = system_chrome.DeviceOrientation.prototype;
-  dart.addTypeTests(system_chrome.DeviceOrientation);
-  dart.addTypeCaches(system_chrome.DeviceOrientation);
-  dart.setLibraryUri(system_chrome.DeviceOrientation, I[0]);
-  dart.setFieldSignature(system_chrome.DeviceOrientation, () => ({
-    __proto__: dart.getFields(system_chrome.DeviceOrientation.__proto__),
+  }).prototype = material_state.MaterialState.prototype;
+  dart.addTypeTests(material_state.MaterialState);
+  dart.addTypeCaches(material_state.MaterialState);
+  dart.setLibraryUri(material_state.MaterialState, I[0]);
+  dart.setFieldSignature(material_state.MaterialState, () => ({
+    __proto__: dart.getFields(material_state.MaterialState.__proto__),
     index: dart.finalFieldType(core.int),
     [_name$]: dart.finalFieldType(core.String)
   }));
-  dart.defineExtensionMethods(system_chrome.DeviceOrientation, ['toString']);
-  system_chrome.DeviceOrientation.portraitUp = C[0] || CT.C0;
-  system_chrome.DeviceOrientation.landscapeLeft = C[1] || CT.C1;
-  system_chrome.DeviceOrientation.portraitDown = C[2] || CT.C2;
-  system_chrome.DeviceOrientation.landscapeRight = C[3] || CT.C3;
-  system_chrome.DeviceOrientation.values = C[4] || CT.C4;
-  var label$ = dart.privateName(system_chrome, "ApplicationSwitcherDescription.label");
-  var primaryColor$ = dart.privateName(system_chrome, "ApplicationSwitcherDescription.primaryColor");
-  system_chrome.ApplicationSwitcherDescription = class ApplicationSwitcherDescription extends core.Object {
-    get label() {
-      return this[label$];
-    }
-    set label(value) {
-      super.label = value;
-    }
-    get primaryColor() {
-      return this[primaryColor$];
-    }
-    set primaryColor(value) {
-      super.primaryColor = value;
+  dart.defineExtensionMethods(material_state.MaterialState, ['toString']);
+  material_state.MaterialState.hovered = C[0] || CT.C0;
+  material_state.MaterialState.focused = C[1] || CT.C1;
+  material_state.MaterialState.pressed = C[2] || CT.C2;
+  material_state.MaterialState.dragged = C[3] || CT.C3;
+  material_state.MaterialState.selected = C[4] || CT.C4;
+  material_state.MaterialState.disabled = C[5] || CT.C5;
+  material_state.MaterialState.error = C[6] || CT.C6;
+  material_state.MaterialState.values = C[7] || CT.C7;
+  material_state.MaterialStateColor = class MaterialStateColor extends ui.Color {
+    static resolveWith(callback) {
+      return new material_state._MaterialStateColor.new(callback);
     }
   };
-  (system_chrome.ApplicationSwitcherDescription.new = function(opts) {
-    let label = opts && 'label' in opts ? opts.label : null;
-    let primaryColor = opts && 'primaryColor' in opts ? opts.primaryColor : null;
-    this[label$] = label;
-    this[primaryColor$] = primaryColor;
+  (material_state.MaterialStateColor.new = function(defaultValue) {
+    material_state.MaterialStateColor.__proto__.new.call(this, defaultValue);
     ;
-  }).prototype = system_chrome.ApplicationSwitcherDescription.prototype;
-  dart.addTypeTests(system_chrome.ApplicationSwitcherDescription);
-  dart.addTypeCaches(system_chrome.ApplicationSwitcherDescription);
-  dart.setLibraryUri(system_chrome.ApplicationSwitcherDescription, I[0]);
-  dart.setFieldSignature(system_chrome.ApplicationSwitcherDescription, () => ({
-    __proto__: dart.getFields(system_chrome.ApplicationSwitcherDescription.__proto__),
-    label: dart.finalFieldType(dart.nullable(core.String)),
-    primaryColor: dart.finalFieldType(dart.nullable(core.int))
-  }));
-  system_chrome.SystemUiOverlay = class SystemUiOverlay extends core.Object {
-    toString() {
-      return this[_name$];
+  }).prototype = material_state.MaterialStateColor.prototype;
+  dart.addTypeTests(material_state.MaterialStateColor);
+  dart.addTypeCaches(material_state.MaterialStateColor);
+  material_state.MaterialStateColor[dart.implements] = () => [material_state.MaterialStateProperty$(ui.Color)];
+  dart.setLibraryUri(material_state.MaterialStateColor, I[0]);
+  var _resolve$ = dart.privateName(material_state, "_resolve");
+  material_state._MaterialStateColor = class _MaterialStateColor extends material_state.MaterialStateColor {
+    resolve(states) {
+      let t0;
+      t0 = states;
+      return this[_resolve$](t0);
     }
   };
-  (system_chrome.SystemUiOverlay.new = function(index, _name) {
-    this.index = index;
-    this[_name$] = _name;
+  (material_state._MaterialStateColor.new = function(_resolve) {
+    this[_resolve$] = _resolve;
+    material_state._MaterialStateColor.__proto__.new.call(this, _resolve(material_state._MaterialStateColor._defaultStates).value);
     ;
-  }).prototype = system_chrome.SystemUiOverlay.prototype;
-  dart.addTypeTests(system_chrome.SystemUiOverlay);
-  dart.addTypeCaches(system_chrome.SystemUiOverlay);
-  dart.setLibraryUri(system_chrome.SystemUiOverlay, I[0]);
-  dart.setFieldSignature(system_chrome.SystemUiOverlay, () => ({
-    __proto__: dart.getFields(system_chrome.SystemUiOverlay.__proto__),
-    index: dart.finalFieldType(core.int),
-    [_name$]: dart.finalFieldType(core.String)
+  }).prototype = material_state._MaterialStateColor.prototype;
+  dart.addTypeTests(material_state._MaterialStateColor);
+  dart.addTypeCaches(material_state._MaterialStateColor);
+  dart.setMethodSignature(material_state._MaterialStateColor, () => ({
+    __proto__: dart.getMethods(material_state._MaterialStateColor.__proto__),
+    resolve: dart.fnType(ui.Color, [core.Set$(material_state.MaterialState)])
   }));
-  dart.defineExtensionMethods(system_chrome.SystemUiOverlay, ['toString']);
-  system_chrome.SystemUiOverlay.top = C[5] || CT.C5;
-  system_chrome.SystemUiOverlay.bottom = C[6] || CT.C6;
-  system_chrome.SystemUiOverlay.values = C[7] || CT.C7;
-  var systemNavigationBarColor$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.systemNavigationBarColor");
-  var systemNavigationBarDividerColor$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.systemNavigationBarDividerColor");
-  var systemNavigationBarIconBrightness$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.systemNavigationBarIconBrightness");
-  var statusBarColor$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.statusBarColor");
-  var statusBarBrightness$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.statusBarBrightness");
-  var statusBarIconBrightness$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.statusBarIconBrightness");
-  var _toMap = dart.privateName(system_chrome, "_toMap");
-  var _name = dart.privateName(ui, "_name");
-  var Color_value = dart.privateName(ui, "Color.value");
-  system_chrome.SystemUiOverlayStyle = class SystemUiOverlayStyle extends core.Object {
-    get systemNavigationBarColor() {
-      return this[systemNavigationBarColor$];
-    }
-    set systemNavigationBarColor(value) {
-      super.systemNavigationBarColor = value;
-    }
-    get systemNavigationBarDividerColor() {
-      return this[systemNavigationBarDividerColor$];
-    }
-    set systemNavigationBarDividerColor(value) {
-      super.systemNavigationBarDividerColor = value;
-    }
-    get systemNavigationBarIconBrightness() {
-      return this[systemNavigationBarIconBrightness$];
-    }
-    set systemNavigationBarIconBrightness(value) {
-      super.systemNavigationBarIconBrightness = value;
-    }
-    get statusBarColor() {
-      return this[statusBarColor$];
-    }
-    set statusBarColor(value) {
-      super.statusBarColor = value;
-    }
-    get statusBarBrightness() {
-      return this[statusBarBrightness$];
-    }
-    set statusBarBrightness(value) {
-      super.statusBarBrightness = value;
-    }
-    get statusBarIconBrightness() {
-      return this[statusBarIconBrightness$];
-    }
-    set statusBarIconBrightness(value) {
-      super.statusBarIconBrightness = value;
-    }
-    [_toMap]() {
-      let t0, t0$, t0$0, t0$1, t0$2, t0$3;
-      return new (T.IdentityMapOfString$dynamic()).from(["systemNavigationBarColor", (t0 = this.systemNavigationBarColor, t0 == null ? null : t0.value), "systemNavigationBarDividerColor", (t0$ = this.systemNavigationBarDividerColor, t0$ == null ? null : t0$.value), "statusBarColor", (t0$0 = this.statusBarColor, t0$0 == null ? null : t0$0.value), "statusBarBrightness", (t0$1 = this.statusBarBrightness, t0$1 == null ? null : dart.toString(t0$1)), "statusBarIconBrightness", (t0$2 = this.statusBarIconBrightness, t0$2 == null ? null : dart.toString(t0$2)), "systemNavigationBarIconBrightness", (t0$3 = this.systemNavigationBarIconBrightness, t0$3 == null ? null : dart.toString(t0$3))]);
-    }
-    toString() {
-      return this[_toMap]()[$toString]();
-    }
-    copyWith(opts) {
-      let t0, t0$, t0$0, t0$1, t0$2, t0$3;
-      let systemNavigationBarColor = opts && 'systemNavigationBarColor' in opts ? opts.systemNavigationBarColor : null;
-      let systemNavigationBarDividerColor = opts && 'systemNavigationBarDividerColor' in opts ? opts.systemNavigationBarDividerColor : null;
-      let statusBarColor = opts && 'statusBarColor' in opts ? opts.statusBarColor : null;
-      let statusBarBrightness = opts && 'statusBarBrightness' in opts ? opts.statusBarBrightness : null;
-      let statusBarIconBrightness = opts && 'statusBarIconBrightness' in opts ? opts.statusBarIconBrightness : null;
-      let systemNavigationBarIconBrightness = opts && 'systemNavigationBarIconBrightness' in opts ? opts.systemNavigationBarIconBrightness : null;
-      return new system_chrome.SystemUiOverlayStyle.new({systemNavigationBarColor: (t0 = systemNavigationBarColor, t0 == null ? this.systemNavigationBarColor : t0), systemNavigationBarDividerColor: (t0$ = systemNavigationBarDividerColor, t0$ == null ? this.systemNavigationBarDividerColor : t0$), statusBarColor: (t0$0 = statusBarColor, t0$0 == null ? this.statusBarColor : t0$0), statusBarIconBrightness: (t0$1 = statusBarIconBrightness, t0$1 == null ? this.statusBarIconBrightness : t0$1), statusBarBrightness: (t0$2 = statusBarBrightness, t0$2 == null ? this.statusBarBrightness : t0$2), systemNavigationBarIconBrightness: (t0$3 = systemNavigationBarIconBrightness, t0$3 == null ? this.systemNavigationBarIconBrightness : t0$3)});
-    }
-    get hashCode() {
-      return ui.hashValues(this.systemNavigationBarColor, this.systemNavigationBarDividerColor, this.statusBarColor, this.statusBarBrightness, this.statusBarIconBrightness, this.systemNavigationBarIconBrightness);
-    }
-    _equals(other) {
-      if (other == null) return false;
-      if (!other[$runtimeType]._equals(this[$runtimeType])) return false;
-      return system_chrome.SystemUiOverlayStyle.is(other) && dart.equals(other.systemNavigationBarColor, this.systemNavigationBarColor) && dart.equals(other.systemNavigationBarDividerColor, this.systemNavigationBarDividerColor) && dart.equals(other.statusBarColor, this.statusBarColor) && other.statusBarIconBrightness == this.statusBarIconBrightness && other.statusBarBrightness == this.statusBarBrightness && other.systemNavigationBarIconBrightness == this.systemNavigationBarIconBrightness;
-    }
-  };
-  (system_chrome.SystemUiOverlayStyle.new = function(opts) {
-    let systemNavigationBarColor = opts && 'systemNavigationBarColor' in opts ? opts.systemNavigationBarColor : null;
-    let systemNavigationBarDividerColor = opts && 'systemNavigationBarDividerColor' in opts ? opts.systemNavigationBarDividerColor : null;
-    let systemNavigationBarIconBrightness = opts && 'systemNavigationBarIconBrightness' in opts ? opts.systemNavigationBarIconBrightness : null;
-    let statusBarColor = opts && 'statusBarColor' in opts ? opts.statusBarColor : null;
-    let statusBarBrightness = opts && 'statusBarBrightness' in opts ? opts.statusBarBrightness : null;
-    let statusBarIconBrightness = opts && 'statusBarIconBrightness' in opts ? opts.statusBarIconBrightness : null;
-    this[systemNavigationBarColor$] = systemNavigationBarColor;
-    this[systemNavigationBarDividerColor$] = systemNavigationBarDividerColor;
-    this[systemNavigationBarIconBrightness$] = systemNavigationBarIconBrightness;
-    this[statusBarColor$] = statusBarColor;
-    this[statusBarBrightness$] = statusBarBrightness;
-    this[statusBarIconBrightness$] = statusBarIconBrightness;
-    ;
-  }).prototype = system_chrome.SystemUiOverlayStyle.prototype;
-  dart.addTypeTests(system_chrome.SystemUiOverlayStyle);
-  dart.addTypeCaches(system_chrome.SystemUiOverlayStyle);
-  dart.setMethodSignature(system_chrome.SystemUiOverlayStyle, () => ({
-    __proto__: dart.getMethods(system_chrome.SystemUiOverlayStyle.__proto__),
-    [_toMap]: dart.fnType(core.Map$(core.String, dart.dynamic), []),
-    copyWith: dart.fnType(system_chrome.SystemUiOverlayStyle, [], {statusBarBrightness: dart.nullable(ui.Brightness), statusBarColor: dart.nullable(ui.Color), statusBarIconBrightness: dart.nullable(ui.Brightness), systemNavigationBarColor: dart.nullable(ui.Color), systemNavigationBarDividerColor: dart.nullable(ui.Color), systemNavigationBarIconBrightness: dart.nullable(ui.Brightness)}, {})
+  dart.setLibraryUri(material_state._MaterialStateColor, I[0]);
+  dart.setFieldSignature(material_state._MaterialStateColor, () => ({
+    __proto__: dart.getFields(material_state._MaterialStateColor.__proto__),
+    [_resolve$]: dart.finalFieldType(dart.fnType(ui.Color, [core.Set$(material_state.MaterialState)]))
   }));
-  dart.setLibraryUri(system_chrome.SystemUiOverlayStyle, I[0]);
-  dart.setFieldSignature(system_chrome.SystemUiOverlayStyle, () => ({
-    __proto__: dart.getFields(system_chrome.SystemUiOverlayStyle.__proto__),
-    systemNavigationBarColor: dart.finalFieldType(dart.nullable(ui.Color)),
-    systemNavigationBarDividerColor: dart.finalFieldType(dart.nullable(ui.Color)),
-    systemNavigationBarIconBrightness: dart.finalFieldType(dart.nullable(ui.Brightness)),
-    statusBarColor: dart.finalFieldType(dart.nullable(ui.Color)),
-    statusBarBrightness: dart.finalFieldType(dart.nullable(ui.Brightness)),
-    statusBarIconBrightness: dart.finalFieldType(dart.nullable(ui.Brightness))
-  }));
-  dart.defineExtensionMethods(system_chrome.SystemUiOverlayStyle, ['toString', '_equals']);
-  dart.defineExtensionAccessors(system_chrome.SystemUiOverlayStyle, ['hashCode']);
-  dart.defineLazy(system_chrome.SystemUiOverlayStyle, {
-    /*system_chrome.SystemUiOverlayStyle.light*/get light() {
+  dart.defineLazy(material_state._MaterialStateColor, {
+    /*material_state._MaterialStateColor._defaultStates*/get _defaultStates() {
       return C[8] || CT.C8;
+    }
+  }, false);
+  var _EnabledAndDisabledMouseCursor_name = dart.privateName(material_state, "_EnabledAndDisabledMouseCursor.name");
+  var SystemMouseCursor_kind = dart.privateName(mouse_cursor, "SystemMouseCursor.kind");
+  var _EnabledAndDisabledMouseCursor_disabledCursor = dart.privateName(material_state, "_EnabledAndDisabledMouseCursor.disabledCursor");
+  var _EnabledAndDisabledMouseCursor_enabledCursor = dart.privateName(material_state, "_EnabledAndDisabledMouseCursor.enabledCursor");
+  material_state.MaterialStateMouseCursor = class MaterialStateMouseCursor extends mouse_cursor.MouseCursor {
+    createSession(device) {
+      return this.resolve(T.LinkedHashSetOfMaterialState().new()).createSession(device);
+    }
+  };
+  (material_state.MaterialStateMouseCursor.new = function() {
+    material_state.MaterialStateMouseCursor.__proto__.new.call(this);
+    ;
+  }).prototype = material_state.MaterialStateMouseCursor.prototype;
+  dart.addTypeTests(material_state.MaterialStateMouseCursor);
+  dart.addTypeCaches(material_state.MaterialStateMouseCursor);
+  material_state.MaterialStateMouseCursor[dart.implements] = () => [material_state.MaterialStateProperty$(mouse_cursor.MouseCursor)];
+  dart.setMethodSignature(material_state.MaterialStateMouseCursor, () => ({
+    __proto__: dart.getMethods(material_state.MaterialStateMouseCursor.__proto__),
+    createSession: dart.fnType(mouse_cursor.MouseCursorSession, [core.int])
+  }));
+  dart.setLibraryUri(material_state.MaterialStateMouseCursor, I[0]);
+  dart.defineLazy(material_state.MaterialStateMouseCursor, {
+    /*material_state.MaterialStateMouseCursor.clickable*/get clickable() {
+      return C[9] || CT.C9;
     },
-    /*system_chrome.SystemUiOverlayStyle.dark*/get dark() {
+    /*material_state.MaterialStateMouseCursor.textable*/get textable() {
       return C[12] || CT.C12;
     }
   }, false);
-  system_chrome.SystemChrome = class SystemChrome extends core.Object {
-    static setPreferredOrientations(orientations) {
-      return async.async(dart.void, function* setPreferredOrientations() {
-        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setPreferredOrientations", system_chrome._stringify(orientations));
-      });
+  const enabledCursor$ = _EnabledAndDisabledMouseCursor_enabledCursor;
+  const disabledCursor$ = _EnabledAndDisabledMouseCursor_disabledCursor;
+  const name$ = _EnabledAndDisabledMouseCursor_name;
+  material_state._EnabledAndDisabledMouseCursor = class _EnabledAndDisabledMouseCursor extends material_state.MaterialStateMouseCursor {
+    get enabledCursor() {
+      return this[enabledCursor$];
     }
-    static setApplicationSwitcherDescription(description) {
-      return async.async(dart.void, function* setApplicationSwitcherDescription() {
-        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setApplicationSwitcherDescription", new (T.IdentityMapOfString$dynamic()).from(["label", description.label, "primaryColor", description.primaryColor]));
-      });
+    set enabledCursor(value) {
+      super.enabledCursor = value;
     }
-    static setEnabledSystemUIOverlays(overlays) {
-      return async.async(dart.void, function* setEnabledSystemUIOverlays() {
-        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setEnabledSystemUIOverlays", system_chrome._stringify(overlays));
-      });
+    get disabledCursor() {
+      return this[disabledCursor$];
     }
-    static restoreSystemUIOverlays() {
-      return async.async(dart.void, function* restoreSystemUIOverlays() {
-        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.restoreSystemUIOverlays", null);
-      });
+    set disabledCursor(value) {
+      super.disabledCursor = value;
     }
-    static setSystemUIOverlayStyle(style) {
-      if (!(style !== null)) dart.assertFailed(null, I[1], 395, 12, "style != null");
-      if (system_chrome.SystemChrome._pendingStyle != null) {
-        system_chrome.SystemChrome._pendingStyle = style;
-        return;
+    get name() {
+      return this[name$];
+    }
+    set name(value) {
+      super.name = value;
+    }
+    resolve(states) {
+      if (states.contains(material_state.MaterialState.disabled)) {
+        return this.disabledCursor;
       }
-      if (style._equals(system_chrome.SystemChrome._latestStyle)) {
-        return;
-      }
-      system_chrome.SystemChrome._pendingStyle = style;
-      async.scheduleMicrotask(dart.fn(() => {
-        if (!(system_chrome.SystemChrome._pendingStyle != null)) dart.assertFailed(null, I[1], 408, 14, "_pendingStyle != null");
-        if (!dart.equals(system_chrome.SystemChrome._pendingStyle, system_chrome.SystemChrome._latestStyle)) {
-          system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setSystemUIOverlayStyle", dart.nullCheck(system_chrome.SystemChrome._pendingStyle)[_toMap]());
-          system_chrome.SystemChrome._latestStyle = system_chrome.SystemChrome._pendingStyle;
-        }
-        system_chrome.SystemChrome._pendingStyle = null;
-      }, T.VoidTovoid()));
+      return this.enabledCursor;
     }
-    static get latestStyle() {
-      return system_chrome.SystemChrome._latestStyle;
+    get debugDescription() {
+      return "MaterialStateMouseCursor(" + this.name + ")";
     }
   };
-  (system_chrome.SystemChrome.__ = function() {
+  (material_state._EnabledAndDisabledMouseCursor.new = function(opts) {
+    let enabledCursor = opts && 'enabledCursor' in opts ? opts.enabledCursor : null;
+    let disabledCursor = opts && 'disabledCursor' in opts ? opts.disabledCursor : null;
+    let name = opts && 'name' in opts ? opts.name : null;
+    this[enabledCursor$] = enabledCursor;
+    this[disabledCursor$] = disabledCursor;
+    this[name$] = name;
+    material_state._EnabledAndDisabledMouseCursor.__proto__.new.call(this);
     ;
-  }).prototype = system_chrome.SystemChrome.prototype;
-  dart.addTypeTests(system_chrome.SystemChrome);
-  dart.addTypeCaches(system_chrome.SystemChrome);
-  dart.setLibraryUri(system_chrome.SystemChrome, I[0]);
-  dart.defineLazy(system_chrome.SystemChrome, {
-    /*system_chrome.SystemChrome._pendingStyle*/get _pendingStyle() {
-      return null;
-    },
-    set _pendingStyle(_) {},
-    /*system_chrome.SystemChrome._latestStyle*/get _latestStyle() {
-      return null;
-    },
-    set _latestStyle(_) {}
-  }, false);
-  system_chrome._stringify = function _stringify(list) {
-    return (() => {
-      let t0 = T.JSArrayOfString().of([]);
-      for (let item of list)
-        t0[$add](dart.toString(item));
-      return t0;
-    })();
+  }).prototype = material_state._EnabledAndDisabledMouseCursor.prototype;
+  dart.addTypeTests(material_state._EnabledAndDisabledMouseCursor);
+  dart.addTypeCaches(material_state._EnabledAndDisabledMouseCursor);
+  dart.setMethodSignature(material_state._EnabledAndDisabledMouseCursor, () => ({
+    __proto__: dart.getMethods(material_state._EnabledAndDisabledMouseCursor.__proto__),
+    resolve: dart.fnType(mouse_cursor.MouseCursor, [core.Set$(material_state.MaterialState)])
+  }));
+  dart.setGetterSignature(material_state._EnabledAndDisabledMouseCursor, () => ({
+    __proto__: dart.getGetters(material_state._EnabledAndDisabledMouseCursor.__proto__),
+    debugDescription: core.String
+  }));
+  dart.setLibraryUri(material_state._EnabledAndDisabledMouseCursor, I[0]);
+  dart.setFieldSignature(material_state._EnabledAndDisabledMouseCursor, () => ({
+    __proto__: dart.getFields(material_state._EnabledAndDisabledMouseCursor.__proto__),
+    enabledCursor: dart.finalFieldType(mouse_cursor.MouseCursor),
+    disabledCursor: dart.finalFieldType(mouse_cursor.MouseCursor),
+    name: dart.finalFieldType(core.String)
+  }));
+  material_state.MaterialStateBorderSide = class MaterialStateBorderSide extends borders.BorderSide {
+    static resolveWith(callback) {
+      return new material_state._MaterialStateBorderSide.new(callback);
+    }
   };
-  dart.trackLibraries("packages/flutter/src/services/system_chrome.dart", {
-    "package:flutter/src/services/system_chrome.dart": system_chrome
+  (material_state.MaterialStateBorderSide.new = function() {
+    material_state.MaterialStateBorderSide.__proto__.new.call(this);
+    ;
+  }).prototype = material_state.MaterialStateBorderSide.prototype;
+  dart.addTypeTests(material_state.MaterialStateBorderSide);
+  dart.addTypeCaches(material_state.MaterialStateBorderSide);
+  material_state.MaterialStateBorderSide[dart.implements] = () => [material_state.MaterialStateProperty$(dart.nullable(borders.BorderSide))];
+  dart.setLibraryUri(material_state.MaterialStateBorderSide, I[0]);
+  var _resolve$0 = dart.privateName(material_state, "_MaterialStateBorderSide._resolve");
+  material_state._MaterialStateBorderSide = class _MaterialStateBorderSide extends material_state.MaterialStateBorderSide {
+    get [_resolve$]() {
+      return this[_resolve$0];
+    }
+    set [_resolve$](value) {
+      super[_resolve$] = value;
+    }
+    resolve(states) {
+      let t0;
+      t0 = states;
+      return this[_resolve$](t0);
+    }
+  };
+  (material_state._MaterialStateBorderSide.new = function(_resolve) {
+    this[_resolve$0] = _resolve;
+    material_state._MaterialStateBorderSide.__proto__.new.call(this);
+    ;
+  }).prototype = material_state._MaterialStateBorderSide.prototype;
+  dart.addTypeTests(material_state._MaterialStateBorderSide);
+  dart.addTypeCaches(material_state._MaterialStateBorderSide);
+  dart.setMethodSignature(material_state._MaterialStateBorderSide, () => ({
+    __proto__: dart.getMethods(material_state._MaterialStateBorderSide.__proto__),
+    resolve: dart.fnType(dart.nullable(borders.BorderSide), [core.Set$(material_state.MaterialState)])
+  }));
+  dart.setLibraryUri(material_state._MaterialStateBorderSide, I[0]);
+  dart.setFieldSignature(material_state._MaterialStateBorderSide, () => ({
+    __proto__: dart.getFields(material_state._MaterialStateBorderSide.__proto__),
+    [_resolve$]: dart.finalFieldType(dart.fnType(dart.nullable(borders.BorderSide), [core.Set$(material_state.MaterialState)]))
+  }));
+  material_state.MaterialStateOutlinedBorder = class MaterialStateOutlinedBorder extends borders.OutlinedBorder {};
+  (material_state.MaterialStateOutlinedBorder.new = function() {
+    material_state.MaterialStateOutlinedBorder.__proto__.new.call(this);
+    ;
+  }).prototype = material_state.MaterialStateOutlinedBorder.prototype;
+  dart.addTypeTests(material_state.MaterialStateOutlinedBorder);
+  dart.addTypeCaches(material_state.MaterialStateOutlinedBorder);
+  material_state.MaterialStateOutlinedBorder[dart.implements] = () => [material_state.MaterialStateProperty$(dart.nullable(borders.OutlinedBorder))];
+  dart.setLibraryUri(material_state.MaterialStateOutlinedBorder, I[0]);
+  const _is_MaterialStateProperty_default = Symbol('_is_MaterialStateProperty_default');
+  material_state.MaterialStateProperty$ = dart.generic(T => {
+    class MaterialStateProperty extends core.Object {
+      static resolveAs(T, value, states) {
+        if (material_state.MaterialStateProperty$(T).is(value)) {
+          let property = value;
+          return property.resolve(states);
+        }
+        return value;
+      }
+      static resolveWith(T, callback) {
+        return new (material_state._MaterialStatePropertyWith$(T)).new(callback);
+      }
+      static all(T, value) {
+        return new (material_state._MaterialStatePropertyAll$(T)).new(value);
+      }
+    }
+    (MaterialStateProperty.new = function() {
+      ;
+    }).prototype = MaterialStateProperty.prototype;
+    dart.addTypeTests(MaterialStateProperty);
+    MaterialStateProperty.prototype[_is_MaterialStateProperty_default] = true;
+    dart.addTypeCaches(MaterialStateProperty);
+    dart.setLibraryUri(MaterialStateProperty, I[0]);
+    return MaterialStateProperty;
+  });
+  material_state.MaterialStateProperty = material_state.MaterialStateProperty$();
+  dart.addTypeTests(material_state.MaterialStateProperty, _is_MaterialStateProperty_default);
+  const _is__MaterialStatePropertyWith_default = Symbol('_is__MaterialStatePropertyWith_default');
+  material_state._MaterialStatePropertyWith$ = dart.generic(T => {
+    class _MaterialStatePropertyWith extends core.Object {
+      resolve(states) {
+        let t0;
+        t0 = states;
+        return this[_resolve$](t0);
+      }
+    }
+    (_MaterialStatePropertyWith.new = function(_resolve) {
+      this[_resolve$] = _resolve;
+      ;
+    }).prototype = _MaterialStatePropertyWith.prototype;
+    dart.addTypeTests(_MaterialStatePropertyWith);
+    _MaterialStatePropertyWith.prototype[_is__MaterialStatePropertyWith_default] = true;
+    dart.addTypeCaches(_MaterialStatePropertyWith);
+    _MaterialStatePropertyWith[dart.implements] = () => [material_state.MaterialStateProperty$(T)];
+    dart.setMethodSignature(_MaterialStatePropertyWith, () => ({
+      __proto__: dart.getMethods(_MaterialStatePropertyWith.__proto__),
+      resolve: dart.fnType(T, [core.Set$(material_state.MaterialState)])
+    }));
+    dart.setLibraryUri(_MaterialStatePropertyWith, I[0]);
+    dart.setFieldSignature(_MaterialStatePropertyWith, () => ({
+      __proto__: dart.getFields(_MaterialStatePropertyWith.__proto__),
+      [_resolve$]: dart.finalFieldType(dart.fnType(T, [core.Set$(material_state.MaterialState)]))
+    }));
+    return _MaterialStatePropertyWith;
+  });
+  material_state._MaterialStatePropertyWith = material_state._MaterialStatePropertyWith$();
+  dart.addTypeTests(material_state._MaterialStatePropertyWith, _is__MaterialStatePropertyWith_default);
+  const _is__MaterialStatePropertyAll_default = Symbol('_is__MaterialStatePropertyAll_default');
+  material_state._MaterialStatePropertyAll$ = dart.generic(T => {
+    class _MaterialStatePropertyAll extends core.Object {
+      resolve(states) {
+        return this.value;
+      }
+      toString() {
+        return "MaterialStateProperty.all(" + dart.str(this.value) + ")";
+      }
+    }
+    (_MaterialStatePropertyAll.new = function(value) {
+      this.value = value;
+      ;
+    }).prototype = _MaterialStatePropertyAll.prototype;
+    dart.addTypeTests(_MaterialStatePropertyAll);
+    _MaterialStatePropertyAll.prototype[_is__MaterialStatePropertyAll_default] = true;
+    dart.addTypeCaches(_MaterialStatePropertyAll);
+    _MaterialStatePropertyAll[dart.implements] = () => [material_state.MaterialStateProperty$(T)];
+    dart.setMethodSignature(_MaterialStatePropertyAll, () => ({
+      __proto__: dart.getMethods(_MaterialStatePropertyAll.__proto__),
+      resolve: dart.fnType(T, [core.Set$(material_state.MaterialState)])
+    }));
+    dart.setLibraryUri(_MaterialStatePropertyAll, I[0]);
+    dart.setFieldSignature(_MaterialStatePropertyAll, () => ({
+      __proto__: dart.getFields(_MaterialStatePropertyAll.__proto__),
+      value: dart.finalFieldType(T)
+    }));
+    dart.defineExtensionMethods(_MaterialStatePropertyAll, ['toString']);
+    return _MaterialStatePropertyAll;
+  });
+  material_state._MaterialStatePropertyAll = material_state._MaterialStatePropertyAll$();
+  dart.addTypeTests(material_state._MaterialStatePropertyAll, _is__MaterialStatePropertyAll_default);
+  dart.trackLibraries("packages/flutter/src/material/material_state.dart", {
+    "package:flutter/src/material/material_state.dart": material_state
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["system_chrome.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAgDA;;yDAlBK;;;;EAkBL;;;;;;;;;;;;;;;;;;IAagB;;;;;;IAMH;;;;;;;;QATiC;QAAY;IAAZ;IAAY;;EAAe;;;;;;;;;;;;IAuBzE;;uDARK;;;;EAQL;;;;;;;;;;;;;;;;;;;;;;;IAoBe;;;;;;IAKA;;;;;;IAOK;;;;;;IAKL;;;;;;IAKK;;;;;;IAKA;;;;;;;;AA0BhB,YAAwB,6CACtB,8EAA4B,OAA0B,WACtD,8FAAmC,OAAiC,YACpE,8DAAkB,OAAgB,aAClC,wEAAuB,OAAqB,sBAC5C,gFAA2B,OAAyB,sBACpD,oGAAqC,OAAmC;IAE5E;;AAGqB,YAAA,AAAS;IAAU;;;UAI/B;UACA;UACA;UACK;UACA;UACA;AAEZ,YAAO,wEAC8C,KAAzB,wBAAwB,EAAxB,aAAiC,uEACM,MAAhC,+BAA+B,EAA/B,cAAwC,8DAC1C,OAAf,cAAc,EAAd,eAAuB,uDACU,OAAxB,uBAAuB,EAAvB,eAAgC,4DAChB,OAApB,mBAAmB,EAAnB,eAA4B,sEACoB,OAAlC,iCAAiC,EAAjC,eAA0C;IAEjF;;AAIE,YAAO,eACL,+BACA,sCACA,qBACA,0BACA,8BACA;IAEJ;;UAGwB;AACtB,WAAI,AAAM,KAAD,uBAAgB,qBACvB,MAAO;AACT,YAAa,AAMT,uCANG,KAAK,KAC0B,YAA/B,AAAM,KAAD,2BAA6B,kCACI,YAAtC,AAAM,KAAD,kCAAoC,yCACpB,YAArB,AAAM,KAAD,iBAAmB,wBACxB,AAAM,AAAwB,KAAzB,4BAA4B,gCACjC,AAAM,AAAoB,KAArB,wBAAwB,4BAC7B,AAAM,AAAkC,KAAnC,sCAAsC;IACpD;;;QAvHO;QACA;QACA;QACA;QACA;QACA;IALA;IACA;IACA;IACA;IACA;IACA;;EACL;;;;;;;;;;;;;;;;;;;;;MAoCgC,wCAAK;;;MAWL,uCAAI;;;;;oCAiG+B;AAAzB;AAIzC,QAHD,MAAqB,AAAS,gEAC5B,yCACA,yBAAW,YAAY;MAE3B;;6CAOqF;AAAhC;AAOlD,QAND,MAAqB,AAAS,gEAC5B,kDACiB,4CACf,SAAS,AAAY,WAAD,QACpB,gBAAgB,AAAY,WAAD;MAGjC;;sCAwBqE;AAAvB;AAI3C,QAHD,MAAqB,AAAS,gEAC5B,2CACA,yBAAW,QAAQ;MAEvB;;;AAW2C;AAIxC,QAHD,MAAqB,AAAS,gEAC5B,wCACA;MAEJ;;mCAwFyD;AACvD,YAAO,AAAM,KAAD;AACZ,UAAI;AAEmB,QAArB,2CAAgB,KAAK;AACrB;;AAEF,UAAI,AAAM,KAAD,SAAI;AAGX;;AAEmB,MAArB,2CAAgB,KAAK;AAWnB,MAVF,wBAAkB;AAChB,cAAO,AAAc;AACrB,yBAAI,0CAAiB;AAIlB,UAHc,AAAS,gEACtB,wCACa,AAAE,eAAf;AAE0B,UAA5B,0CAAe;;AAEG,QAApB,2CAAgB;;IAEpB;;AAMgD;IAAY;;;;EA1M5C;;;;;MAsMa,wCAAa;;;;MAKb,uCAAY;;;;;iDApNL;AAAS,UAAQ;;AACrD,eAAmB,OAAQ,KAAI;AAAO,+BAAL,IAAI;;;EACtC","file":"../../../../../../../../../../D:/packages/flutter/src/services/system_chrome.dart.lib.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["material_state.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IA6EA;;sDA7CK;;;;EA6CL;;;;;;;;;;;;;;;;;;;uBAoEwE;AAAa,wDAAoB,QAAQ;IAAC;;oDAVnF;AAAgB,+DAAM,YAAY;;EAAC;;;;;;;YAkC/B;;AAAW,WAAS,MAAM;YAAf,AAAQ;IAAQ;;;IARnC;AAAY,gEAAM,AAAQ,AAAiB,QAAjB,CAAC;;EAAsB;;;;;;;;;;;;;MAK1C,iDAAc;;;;;;;;;kBAqET;AACnC,YAAO,AAA2B,cAAJ,sDAAkB,MAAM;IACxD;;;AANM;;EAA0B;;;;;;;;;;MAsBM,iDAAS;;;MAaT,gDAAQ;;;;;;;;IAc5B;;;;;;IACA;;;;;;IACL;;;;;;YAG0B;AACrC,UAAI,AAAO,MAAD,UAAwB;AAChC,cAAO;;AAET,YAAO;IACT;;AAG+B,YAAA,AAAiC,+BAAN,YAAI;IAAE;;;QAlBhD;QACA;QACA;IAFA;IACA;IACA;AAHV;;EAIJ;;;;;;;;;;;;;;;;;;;uBAuG+E;AAC7E,6DAAyB,QAAQ;IAAC;;;AAzChC;;EAAyB;;;;;;;IAsDa;;;;;;YAGL;;AACrC,WAAgB,MAAM;YAAf,AAAQ;IACjB;;;IAPoC;AAA9B;;EAAuC;;;;;;;;;;;;;;AA+DvC;;EAA6B;;;;;;;;0BAkFX,OAA0B;AAChD,YAAU,4CAAN,KAAK;AACwB,yBAAW,KAAK;AAC/C,gBAAO,AAAS,SAAD,SAAS,MAAM;;AAEhC,cAAO,MAAK;MACd;4BAI2E;AAAa,uEAA8B,QAAQ;MAAC;oBAItF;AAAU,sEAA6B,KAAK;MAAC;;;;IACxF;;;;;;;;;;;;cAQ+B;;AAAW,aAAS,MAAM;cAAf,AAAQ;MAAQ;;;MALxB;;IAAS;;;;;;;;;;;;;;;;;;;;;cAcZ;AAAW;MAAK;;AAGxB,cAAA,AAAmC,yCAAP,cAAK;MAAE;;;MARzB;;IAAM","file":"../../../../../../../../../../D:/packages/flutter/src/material/material_state.dart.lib.js"}');
   // Exports:
   return {
-    src__services__system_chrome: system_chrome
+    src__material__material_state: material_state
   };
 }));
 
-//# sourceMappingURL=system_chrome.dart.lib.js.map
+//# sourceMappingURL=material_state.dart.lib.js.map

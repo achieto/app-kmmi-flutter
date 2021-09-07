@@ -1,4 +1,0 @@
-#Tue Sep 07 13:24:07 ICT 2021
-base.0=D\:\\projects\\fooderlich\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
