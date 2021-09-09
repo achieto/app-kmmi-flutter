@@ -65,10 +65,10 @@ class _HomeState extends State<Home> {
                 icon: Icon(Icons.book),
                 label: 'Recipes',
               ),
-              const BottomNavigationBarItem(
-                icon: Icon(Icons.list),
-                label: 'To Buy',
-              ),
+              // const BottomNavigationBarItem(
+              //   icon: Icon(Icons.list),
+              //   label: 'To Buy',
+              // ),
               const BottomNavigationBarItem(
                 icon: Icon(Icons.list),
                 label: 'To Buy',
