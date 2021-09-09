@@ -4,6 +4,7 @@ import 'screens/recipes_screen.dart';
 import 'screens/grocery_screen.dart';
 import 'package:provider/provider.dart';
 import 'models/models.dart';
+import 'screens/search_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
@@ -34,8 +35,16 @@ class _HomeState extends State<Home> {
         return Scaffold(
           appBar: AppBar(
             title: Text('Fooderlich',
-                style: Theme.of(context).textTheme.headline6),
+                style: Theme.of(context).textTheme.headline6,
           ),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  showSearch(context: context, delegate: Search());
+                },
+                icon: Icon(Icons.search))
+          ],
+        ),
           // 2
           body: pages[tabManager.selectedTab],
           bottomNavigationBar: BottomNavigationBar(
@@ -55,6 +64,10 @@ class _HomeState extends State<Home> {
               const BottomNavigationBarItem(
                 icon: Icon(Icons.book),
                 label: 'Recipes',
+              ),
+              const BottomNavigationBarItem(
+                icon: Icon(Icons.list),
+                label: 'To Buy',
               ),
               const BottomNavigationBarItem(
                 icon: Icon(Icons.list),
